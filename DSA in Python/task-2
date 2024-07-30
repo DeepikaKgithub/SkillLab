@@ -3,26 +3,22 @@ class CustomNumber:
         self.value = value
 
     def __add__(self, other):
-        # Overload + operator to perform subtraction
         return CustomNumber(self.value - other.value)
 
     def __sub__(self, other):
-        # Overload - operator to perform addition
         return CustomNumber(self.value + other.value)
 
     def __mul__(self, other):
-        # Overload * operator to perform division
         return CustomNumber(self.value / other.value)
 
     def __truediv__(self, other):
-        # Overload / operator to perform multiplication
         return CustomNumber(self.value * other.value)
 
     def __str__(self):
         return str(self.value)
 
 
-# Example usage
+
 if __name__ == "__main__":
     num1 = CustomNumber(10)
     num2 = CustomNumber(5)
