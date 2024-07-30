@@ -20,11 +20,9 @@ class StudentManager:
         for name, marks in self.students.items():
             total = sum(marks)
             average = total / 3
-            # Create a new list with the marks and the average
             self.students[name] = marks + [average]
 
     def rank_students(self):
-        # Ensure calculate_average is called before ranking to avoid errors
         self.calculate_average()
         sorted_students = sorted(self.students.items(), key=lambda x: x[1][3], reverse=True)
         print("Student Ranking:")
